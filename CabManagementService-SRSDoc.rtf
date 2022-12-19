@@ -1,0 +1,106 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\ul\b\f0\fs48\lang9 CAB MANAGEMENT SERVICE\par
+
+\pard\sa200\sl276\slmult1\ulnone\fs32 INTRODUCTION\par
+
+\pard\sa200\sl276\slmult1\qj\b0\fs24 Transport is an integral part of our social living.  The modern society cannot run without transport   facilities.   There   are   many   companies   who   give   transport   services   to   the individual and corporate clients. In the current system, the client first contacts with the transport company for getting transport service. The company then books the vehicle for him on the requested date and time and then sends the vehicle to his place at the time.The Online cab booking system is the online service which will automate the process of booking a cab and will facilitate both the client and the company with reduced time and efforts. First the company will register his vehicles and the vehicles to the system. Then the client will request for booking a vehicle on his required date and time, providing all necessary information. The fare will be calculated and client should confirm it. Then the employee will serve the client on the specific date and time. Finally the client will have anopportunity to give a feedback for the service he got. \par
+\b\fs32 PURPOSE\par
+\b0\fs24 The purpose of this SRS document is to specify software requirements of the Online Cab Booking. It is intended to be a complete specification of what functionality the system provides. The main purpose of the system is to automate the process of booking a taxi]online cab. Specific design and implementation details will be specified in a future document.\par
+\b\fs32 SCOPE OF THIS DOCUMENT\par
+\b0\fs24 This project\rquote s aim is to automate the system, calculating the fare, collecting fare, collecting all necessary information of the client and then serve the client. The data used by the system is stored in a database that will be the centre of all information held clients and employees and the base for the remainder of the process after the initial application has been made. This enables things to be simplified and considerably quickened, making the jobs of the people involved easier. It supports the current process but centralizes it and makes it possible for decisions to be made earlier and easier way.\par
+\b\fs32 FUNCTIONAL REQUIREMENTS\par
+\fs28 Actors\par
+
+\pard 
+{\pntext\f0 A.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pnucltr{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1\qj\b0 users\par
+{\pntext\f0 B.\tab}Cab Master\par
+{\pntext\f0 C.\tab} Admin\ul\par
+
+\pard\sa200\sl276\slmult1\qj\b A. Users\b0\par
+\ulnone\b\fs24 1. Registration Page\fs28\par
+\b0\fs24\tab 1.1 \tab A text field for providing the firstname and it should contain a min length \tab\tab\tab of 1 and maximum length of 10, and ensure numbers cannot be entered in \tab\tab the name field.(mandatory field)\par
+\tab 1.2\tab A text field for providing the lastname and also ensure it should not \tab\tab\tab contains numbers or any special character.(mandatory field)\par
+\tab 1.3\tab There should be a text field for giving the gender ,it should contain a drop \tab\tab down menu that includes (male,female,others).\par
+
+\pard\sa200\sl360\slmult1\qj\tab 1.4\tab A text field for providing the mobile number and it should \tab contain \tab\tab\tab a max \tab of 10 number +  country code(drop down list), also the mobile \tab\tab\tab number should be verified by receiving the otp.(mandatory field)\b\fs28\par
+
+\pard\sa200\sl276\slmult1\qj\b0\fs24\tab 1.5\tab There should be a text field for providing the users email id, and ensure it \tab\tab accepts only the email id as data, email id should be verified by receiving \tab\tab a otp in the email id provided.\par
+\tab 1.6\tab A Text field should be there for providing the password and it should \tab\tab\tab contain min of 8 character that includes special character,alphanumeric  \tab\tab\tab character,uppercase and lowercase.(mandatory field)\par
+
+\pard\sa200\sl360\slmult1\qj\tab 1.7\tab Submit button to validate the email and password, if the email given is \tab\tab\tab already existing a error message should be displayed,also if the password \tab\tab given is not as per the specification error message should be shown.\par
+
+\pard\sa200\sl276\slmult1\qj\b 2. Login Page \b0\par
+
+\pard\sa200\sl360\slmult1\qj\tab 2.1 \tab A Text field should be there for providing the password and it should \tab\tab\tab contain min of 8 character that includes special character,alphanumeric  \tab\tab\tab character,uppercase and lowercase.\par
+
+\pard\sa200\sl276\slmult1\qj\tab 2.2\tab A text field should be there for collecting the users email id as \tab\tab\tab\tab input,if the entered data is not a email  the user should get an alert by \tab\tab\tab receiving the error message.\par
+
+\pard\sa200\sl360\slmult1\qj\tab 2.3 \tab Submit button to validate the email id and password and it should \tab\tab\tab\tab redirects to next page.\par
+\b 3. Cab Searching \fs28\par
+
+\pard\sa200\sl276\slmult1\qj\b0\fs24\tab 3.1\tab There should be a search field where we can search for available \tab\tab\tab\tab cabs like (taxi,rental cabs,location).\par
+\tab 3.2\tab The loaction shoulde be enabled automatically while searching for both \tab\tab\tab pickup location and destination.( required a pop message if the location \tab\tab\tab is disabled) \par
+\tab 3.3\tab After selecting the destination, the estimated cab fare and available cabs \tab\tab should be displayed ,also the destination should be shown in the Map.\par
+\tab 3.4\tab After booking a ride by selecting pickup, destination, time, and vehicle \tab\tab\tab type. It should start looking for a cab and should show the estimated time \tab\tab to find a cab.\par
+\tab 3.5\tab User should be able to select the nearby available cabs based on \tab\tab\tab\tab time ,fare charge from the option.\tab\par
+\b 4. Confirmation\fs28\par
+\b0\fs24  \tab 4.1\tab After making the payments, the user should get the confirmation . And it \tab\tab\tab should contains details such as the cab details (vehicle number),driver \tab\tab\tab details (contact details, photo,  total no of trips completed.)\par
+\tab 4.2\tab The user should be able to view the driver\rquote s location and estimated time \tab\tab\tab to arrive in the map. Also ensure the map gets updated with the location \tab\tab\tab of the driver.\par
+\tab 4.3\tab There should be a option to call or message the driver.\par
+\tab 4.4\tab User should be able to cancel the trip after the booking is confirmed.\par
+\b 5.Payment Method\fs28\par
+\b0\fs24\tab 5.1\tab After confirming the pickup location ,it redirects to a payment page. It \tab\tab\tab should contain payment methods like (credit or debit,paytm,cash).The \tab\tab\tab user should be able to select any of these payment method. Ensure the \tab\tab\tab user can select one payment method at a time.\par
+\tab 5.2\tab If the user select the payment method using credit or debit card ,then it \tab\tab\tab should redirects to a page where it contains fields for entering the card \tab\tab\tab number (includes only number,max length 16),cvv(includes only \tab\tab\tab\tab number,max length 3), also there should be a field for providing the \tab\tab\tab expiry date of the card(mm/yy).(mandatory)\par
+\tab 5.3\tab After entering the card details it should be validated by receiving the otp \tab\tab\tab to users registerd phone number. And there should be a field for entering \tab\tab\tab the otp ( min 4 ,max 6)\par
+\tab 5.4\tab There should be a Resend otp button to resend the otp after a particular \tab\tab\tab time ( around 10 sec).\par
+\b 6. FeedBack\fs28\par
+\b0\fs24\tab 6.1\tab After the trip the user should receive a message to give feedback about \tab\tab\tab the completed trip ( like whether its on time , dropped in exact location, \tab\tab\tab whether charges extra amount).\par
+\b\fs22\par
+\fs28 B. \ul Cab Master\par
+\ulnone\fs24 1. Registration Page\fs28\par
+\tab\b0\fs24 1.1 \tab A text field for providing the firstname and it should contain a min length \tab\tab\tab of 1 and maximum length of 10, and ensure numbers cannot be entered in \tab\tab the name field.\par
+\tab 1.2\tab A text field for providing the lastname and also ensure it should not \tab\tab\tab contains numbers or any special character.\par
+\tab 1.3\tab There should be a text field for giving the gender ,it should contain a drop \tab\tab down menu that includes (male,female,others).\par
+
+\pard\sa200\sl360\slmult1\qj\tab 1.4\tab A text field for providing the mobile number and it should \tab contain \tab\tab\tab a max \tab of 10 number +  country code, also the mobile number should be \tab\tab\tab verified by receiving the otp.\par
+\tab 1.5\tab There should be a text field to enter the cab master license \tab\tab\tab\tab number( should include 16 character)\par
+\tab 1.6\tab There should be field to enter the cab master Aadhar Number ( max \tab\tab\tab length 12,should include only numbers)\par
+\tab 1.7 \tab There should be fields for uploading photograph of cab master (file \tab\tab\tab format should be pdf ,max file size 10 MB)\b\fs28\par
+
+\pard\sa200\sl276\slmult1\qj\b0\fs24\tab 1.8\tab There should be a text field for providing the cab master email id, and \tab\tab\tab ensure it accepts only the email id as data, email id should \tab\tab\tab\tab be verified by receiving a otp in the email id provided.\par
+\tab 1.9\tab A Text field should be there for providing the password and it should \tab\tab\tab contain min of 8 character that includes special character,alphanumeric  \tab\tab\tab character,uppercase and lowercase.\par
+
+\pard\sa200\sl360\slmult1\qj\tab 1.10\tab Submit button to validate the email and password, if the email given is \tab\tab\tab already existing a error message should be displayed,also if the password \tab\tab given is not as per the specification error message should be shown.\ul\b\fs28\par
+
+\pard\sa200\sl276\slmult1\qj\ulnone\fs24 2.Login Page\fs28\par
+\b0\fs24\tab 2.1\tab A text field should be there for collecting the cab master email id as \tab\tab\tab input,if the entered data is not a email  the user should get an alert by \tab\tab\tab receiving the error message. \par
+
+\pard\sa200\sl360\slmult1\qj\tab 2.2\tab A Text field should be there for providing the password and it should \tab\tab\tab contain min of 8 character that includes special character,alphanumeric  \tab\tab\tab character,uppercase and lowercase.\par
+\tab 2.3\tab Submit button to validate the mobile number and password, if the \tab\tab\tab\tab password is not given as per the requirements a pop message should be \tab\tab\tab displayed\tab\par
+\b 2. Booking Confirmation\par
+\b0\tab 2.1\tab The cab master should receive the notification while the user confirm the \tab\tab\tab booking ( Receive notification via email id provided )\par
+\tab 2.2\tab The cab master should share the journey details ( time that will take to \tab\tab\tab reach the pick up location ) to the user.\par
+\tab 2.3\tab The cab master should verify the otp from user before start of the \tab\tab\tab\tab journey.\par
+\b\fs28 C. \ul Admin\par
+
+\pard\sa200\sl276\slmult1\ulnone\fs24 1. Login Page \b0\par
+
+\pard\sa200\sl360\slmult1\qj\tab 1.1 \tab A Text field should be there for providing the password and it should \tab\tab\tab contain min of 8 character that includes special character,alphanumeric  \tab\tab\tab character,uppercase and lowercase.\par
+
+\pard\sa200\sl276\slmult1\tab 1.2\tab A text field should be there for collecting the email id as input,if the \tab\tab\tab entered data is not a email  the user should get an alert by \tab\tab\tab\tab receiving the error message.\par
+
+\pard\sa200\sl276\slmult1\qj\tab 1.3 \tab Submit button to validate the email id and password, if the \tab\tab\tab\tab password is not given as per the requirements a pop message should be \tab\tab\tab displayed.\tab\par
+
+\pard\sa200\sl360\slmult1\qj\b 2.Users details\par
+\b0\tab 2.1\tab Admin should be able to view the details of the users like ( Name, pickup \tab\tab\tab location, destination, date of booking,time)\par
+\tab 2.2\tab Admin should be able to know the no of users that use the booking \tab\tab\tab system at a time.\par
+
+\pard\sa200\sl276\slmult1\b 3. Cab Masters details\par
+\b0\tab 3.1\tab Admin should be able to view the cab masters details like ( Name , Type \tab\tab\tab of Vehicle, Vehicle no, Contact no,location)\par
+\b 4. View Booking details\par
+\b0  \tab 4.1\tab Admin should be able to view all the bookings held daily,weekly,monthly. \tab\tab\tab Also the Feedback by the users can also be viewed.\par
+\b\fs22\par
+}
+ 
